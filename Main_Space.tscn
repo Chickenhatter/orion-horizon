@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dr7wtgxknu0ke" path="res://spaceman.gd" id="1_ant7w"]
 [ext_resource type="Texture2D" uid="uid://ctl38er243yhs" path="res://icon.svg" id="2_rjstc"]
+[ext_resource type="Texture2D" uid="uid://duagccjj1hms1" path="res://Images/Art_Bar/green.png" id="3_jmrg7"]
+[ext_resource type="Texture2D" uid="uid://pcpre7w6d2ku" path="res://Images/Art_Bar/bar.png" id="3_t1hc5"]
+[ext_resource type="Texture2D" uid="uid://dhihmduvybane" path="res://Images/Art_Bar/red.png" id="4_cpumf"]
+[ext_resource type="Texture2D" uid="uid://bxs5f07wcrlq6" path="res://Images/Art_Bar/yellow.png" id="5_k4h0m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6tmlh"]
 
@@ -13,6 +17,66 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Curve2D" id="Curve2D_rijdi"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 267, -245, 0, 0, 0, 0, -371, -243)
+}
+point_count = 2
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_owtfk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jmrg7")
+}],
+"loop": true,
+"name": &"G",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_cpumf")
+}],
+"loop": true,
+"name": &"R",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_k4h0m")
+}],
+"loop": true,
+"name": &"Y",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"hidden",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gax3n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"Hidden",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_t1hc5")
+}],
+"loop": true,
+"name": &"There",
 "speed": 5.0
 }]
 
@@ -36,8 +100,38 @@ ignore_rotation = false
 
 [node name="bar" type="Node2D" parent="Node2D/Player/Camera2D" unique_id=1680212892]
 
+[node name="Path2D" type="Path2D" parent="Node2D/Player/Camera2D/bar" unique_id=108051713]
+curve = SubResource("Curve2D_rijdi")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Player/Camera2D/bar/Path2D" unique_id=1439888576]
+position = Vector2(267, -245)
+rotation = 3.1384578
+
+[node name="Color" type="AnimatedSprite2D" parent="Node2D/Player/Camera2D/bar/Path2D/PathFollow2D" unique_id=1305786439]
+position = Vector2(239.67651, -33.24882)
+rotation = -3.1384578
+scale = Vector2(7.957625, 5.04)
+sprite_frames = SubResource("SpriteFrames_owtfk")
+animation = &"G"
+
+[node name="Over" type="AnimatedSprite2D" parent="Node2D/Player/Camera2D/bar" unique_id=1982946817]
+position = Vector2(71.99999, -240.00002)
+scale = Vector2(13.059999, 6.899999)
+sprite_frames = SubResource("SpriteFrames_gax3n")
+animation = &"There"
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Player/Camera2D/bar" unique_id=1139536160]
+z_index = -10
+position = Vector2(-108.00003, -297)
+scale = Vector2(12.4800005, 6.9400005)
+texture = ExtResource("3_t1hc5")
+flip_h = true
+flip_v = true
+
 [node name="source" type="Node2D" parent="Node2D/Player" unique_id=1920666041]
 
 [node name="Icon" type="Sprite2D" parent="Node2D/Player" unique_id=1650330839]
 position = Vector2(-245, 141)
 texture = ExtResource("2_rjstc")
+
+[node name="Asteroids" type="Node2D" parent="Node2D" unique_id=820191269]
