@@ -1,3 +1,43 @@
 [gd_scene format=3 uid="uid://bnoxa4xocykxc"]
 
+[ext_resource type="Script" uid="uid://dr7wtgxknu0ke" path="res://spaceman.gd" id="1_ant7w"]
+[ext_resource type="Texture2D" uid="uid://ctl38er243yhs" path="res://icon.svg" id="2_rjstc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tmlh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t1hc5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_rjstc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D" unique_id=193142570]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1099586525]
+
+[node name="Player" type="Node2D" parent="Node2D" unique_id=1528740103]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Player" unique_id=432861746]
+script = ExtResource("1_ant7w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Player/CharacterBody2D" unique_id=728903312]
+shape = SubResource("RectangleShape2D_6tmlh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node2D/Player/CharacterBody2D" unique_id=818618503]
+sprite_frames = SubResource("SpriteFrames_t1hc5")
+
+[node name="Camera2D" type="Camera2D" parent="Node2D/Player" unique_id=14396934]
+ignore_rotation = false
+
+[node name="bar" type="Node2D" parent="Node2D/Player/Camera2D" unique_id=1680212892]
+
+[node name="source" type="Node2D" parent="Node2D/Player" unique_id=1920666041]
+
+[node name="Icon" type="Sprite2D" parent="Node2D/Player" unique_id=1650330839]
+position = Vector2(-245, 141)
+texture = ExtResource("2_rjstc")
