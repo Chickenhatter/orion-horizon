@@ -81,7 +81,8 @@ func _on_ship_body_entered(body: Node2D) -> void:
 		if battery == 3:
 			$"../../Ship/AnimatedSprite2D".play('closed')
 			$"../../Ship/AnimatedSprite2D".z_index = 100
-			
+			await get_tree().create_timer(3).timeout
+			get_tree().change_scene_to_file('res://end.tscn')
 
 
 func _on_battery_body_entered(body: Node2D) -> void:
