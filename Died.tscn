@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b8r0icahcskga"]
+
+[ext_resource type="Script" uid="uid://duwl1ipirki1p" path="res://died.gd" id="1_5s6og"]
+[ext_resource type="Texture2D" uid="uid://cagswap7dwiuc" path="res://Images/grave/vlack.png" id="2_4nfwr"]
+[ext_resource type="Texture2D" uid="uid://frh145bvl0v" path="res://Images/grave/grave.png" id="3_exxd7"]
+[ext_resource type="Texture2D" uid="uid://b2n6ewy2pos7d" path="res://Images/grave/here lies.png" id="4_4nfwr"]
+[ext_resource type="Texture2D" uid="uid://cadafqhqumjd7" path="res://Images/grave/who was lost in space.png" id="5_exxd7"]
+
+[node name="Node2D" type="Node2D" unique_id=252620604]
+script = ExtResource("1_5s6og")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=307870408]
+
+[node name="Vlack" type="Sprite2D" parent="." unique_id=1313944777]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 1000
+position = Vector2(37.5, 8)
+scale = Vector2(15.349999, 8.5)
+texture = ExtResource("2_4nfwr")
+
+[node name="Grave" type="Sprite2D" parent="." unique_id=1936425606]
+position = Vector2(-12, 109)
+scale = Vector2(12, 12)
+texture = ExtResource("3_exxd7")
+
+[node name="HereLies" type="Sprite2D" parent="." unique_id=808424292]
+position = Vector2(117.99999, 72.00001)
+scale = Vector2(7, 7)
+texture = ExtResource("4_4nfwr")
+
+[node name="WhoWasLostInSpace" type="Sprite2D" parent="." unique_id=661838688]
+position = Vector2(52, 129)
+scale = Vector2(6, 6)
+texture = ExtResource("5_exxd7")

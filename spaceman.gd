@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		elif percent <= 0.99:
 			$"../Camera2D/Path2D/PathFollow2D/bar/Path2D/PathFollow2D/Color".play('R')
 		else:
-			print('gameover')
+			get_tree().change_scene_to_file('res://Died.tscn')
 		
 		# Battery
 		if battery == 0:
@@ -67,3 +67,8 @@ func _on_button_pressed() -> void:
 	if battery >= 1:
 		battery -= 1
 		percent = 0
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.name == 'Asteroid':
+		get_tree().change_scene_to_file('res://Died.tscn')
