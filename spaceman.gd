@@ -13,14 +13,14 @@ func _physics_process(delta: float) -> void:
 			velocity += get_gravity() * delta
 		if Input.is_action_pressed('ui_w'):
 			movement.y -= 1
-			percent += 0.001
+			percent += 0.0001
 		if Input.is_action_pressed('ui_a'):
 			$"../source".rotation_degrees -= 0.03
 		if Input.is_action_pressed('ui_d'):
 			$"../source".rotation_degrees += 0.03
 		if Input.is_action_pressed('ui_s'):
 			movement.y += 1
-			percent += 0.001
+			percent += 0.0001
 		# Bar
 		$"../Camera2D/Path2D/PathFollow2D/bar/Path2D/PathFollow2D".progress_ratio = percent
 		if percent < 0.5:
@@ -71,4 +71,14 @@ func _on_button_pressed() -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.name == 'Asteroid':
+		$explode.play('explode')
+		await get_tree().create_timer(3).timeout
 		get_tree().change_scene_to_file('res://Died.tscn')
+
+
+func _on_ship_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		if battery == 3:
+			$"../../Ship/AnimatedSprite2D".play('closed')
+			$"../../Ship/AnimatedSprite2D".z_index = 100
+			
