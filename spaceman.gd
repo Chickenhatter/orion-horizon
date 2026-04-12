@@ -82,3 +82,157 @@ func _on_ship_body_entered(body: Node2D) -> void:
 			$"../../Ship/AnimatedSprite2D".play('closed')
 			$"../../Ship/AnimatedSprite2D".z_index = 100
 			
+
+
+func _on_battery_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery".position = Vector2(1000,1000)
+
+
+func _on_battery_2_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery2".position = Vector2(1000,1000)
+
+
+func _on_battery_3_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery3".position = Vector2(1000,1000)
+
+
+func _on_battery_4_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery4".position = Vector2(1000,1000)
+
+
+func _on_battery_5_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery5".position = Vector2(1000,1000)
+
+
+func _on_battery_6_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery6".position = Vector2(1000,1000)
+
+func _on_battery_7_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery7".position = Vector2(1000,1000)
+
+func _on_battery_8_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery8".position = Vector2(1000,1000)
+
+
+func _on_battery_9_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery9".position = Vector2(1000,1000)
+
+
+func _on_battery_10_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery10".position = Vector2(1000,1000)
+
+
+func _on_battery_11_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery11".position = Vector2(1000,1000)
+
+
+func _on_battery_12_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery12".position = Vector2(1000,1000)
+
+
+func _on_battery_13_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery13".position = Vector2(1000,1000)
+
+
+func _on_battery_14_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery14".position = Vector2(1000,1000)
+
+
+func _on_battery_15_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery15".position = Vector2(1000,1000)
+
+
+func _on_battery_16_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery16".position = Vector2(1000,1000)
+
+
+func _on_battery_17_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery17".position = Vector2(1000,1000)
+
+
+func _on_battery_18_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery18".position = Vector2(1000,1000)
+
+
+func _on_battery_19_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery19".position = Vector2(1000,1000)
+
+
+func _on_battery_20_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery20".position = Vector2(1000,1000)
+
+
+func _on_battery_21_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery21".position = Vector2(1000,1000)
+
+
+func _on_battery_22_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery22".position = Vector2(1000,1000)
+
+
+func _on_battery_23_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery23".position = Vector2(1000,1000)
+
+
+func _on_battery_24_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery24".position = Vector2(1000,1000)
+
+
+func _on_battery_25_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery25".position = Vector2(1000,1000)
+
+
+func _on_battery_26_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		battery += 1
+		$"../../battery/battery26".position = Vector2(1000,1000)
